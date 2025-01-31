@@ -1,0 +1,68 @@
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>RZA ZOO</title>
+    <link rel="stylesheet" href="static/book.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="topnav">
+  <a href="{{ url_for('home_page') }}"><img src="static\a.jpg.png" alt="Logo">
+  <a href="{{ url_for('visit_page') }}">Visit Here</a>
+  <a href="{{ url_for('about_page') }}">About</a>
+    <a href="{{ url_for('plan_page') }}">Plan your Visit</a>
+      <a href="{{ url_for('login_page') }}">Login</a>
+      <a href="{{ url_for('homepage')}}" class="logoutbtn">logout</a>
+   <a href="{{ url_for('book_page') }}" class="book" >Book Now</a>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="form">
+    <h2>Booking Form</h2>
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required>
+
+    <label for="Email">Email:</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="Adults">Adults:</label>
+    <select id="adult" name="adult" required>
+        <option value=""></option>
+        <option value="one">1</option>
+        <option value="two">2</option>
+        <option value="three">3</option>
+        <option value="four">4</option>
+        <option value="five">5</option>
+        <option value="six">6</option>
+        <option value="seven">7</option>
+        <option value="eight">8</option>
+        <option value="nine">9</option>
+        <option value="ten">10</option>
+    </select>
+    <label for="Child">Child:</label>
+    <select id="child" name="child" required>
+        <option value=""></option>
+        <option value="one">1</option>
+        <option value="two">2</option>
+        <option value="three">3</option>
+        <option value="four">4</option>
+        <option value="five">5</option>
+        <option value="six">6</option>
+        <option value="seven">7</option>
+        <option value="eight">8</option>
+        <option value="nine">9</option>
+        <option value="ten">10</option>
+    </select>
+
+    <button type="submit">Book</button>
+</div>
+<body>
+</body>
+</html>

@@ -1,0 +1,116 @@
+body {
+  height: 1300px;
+  background-color: #265B15;
+  background-image: linear-gradient(to bottom right, #265B15 50%, #847A5D 50%);
+  margin: opx;
+}
+
+.luckiest-guy-regular {
+  font-family: "Luckiest Guy", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.topnav {
+font-family: "inter";
+display: flex;
+position: sticky;
+align-items: center;
+justify-content: space-between;
+top: 0;
+background: rgba(0, 0, 0, 0.6)
+background-blend-mode: darken;
+background-size: cover;
+color: white;
+padding: 10px 20px;
+background-color: #555555;
+text-decoration: none;
+border-radius:15px;
+}
+
+.topnav a:hover{
+background-color: #265B15;
+border-radius:30px;
+padding: 5px;
+}
+
+.topnav a{
+color: white;
+text-decoration: none;
+font-size: 25px;
+}
+
+.book{
+    background-color: green;
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+
+.topnav img {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Style the form container */
+.form {
+    width: 300px;
+    margin: auto;
+    padding: 50px;
+    background-color: #F2AF28;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.form h2 {
+    text-align: center;
+    color: #333;
+    font-family: "Luckiest Guy", serif;
+}
+
+
+.form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: "Luckiest Guy", serif;
+    font-size: 25px;
+}
+
+
+.form input,
+.form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #847A5D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.form button:hover {
+    background-color: #218838;
+}
