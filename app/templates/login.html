@@ -3,70 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="static/login.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     <title>Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .login-container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background: #007BFF;
-            border: none;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #0056b3;
-        }
-    </style>
+
+    <div class="topnav">
+    <img src="static\a.jpg.png" alt="Logo">
+  <a href="{{ url_for('visit_page') }}">Visit Here</a>
+  <a href="{{ url_for('about_page') }}">About</a>
+        <a href="{{ url_for('plan_page') }}">Plan your Visit</a>
+    <a href="{{ url_for('login_page') }}">Login</a>
+   <a href="{{ url_for('book_page') }}" class="book" >Book Now</a>
+    </div>
 </head>
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form id="auth-form" action="{{ url_for('login_page')}}" method="POST">
+        <form id="auth-form" action="{{ url_for('login_page') }}" method="POST">
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>
-            <button type="submit" value="login" onclick="setActionForm('login')">Login</button>
-            <button type="register" value="register" onclick="setActionForm('register')" >Register</button>
+            <button type="submit" onclick="setActionForm('login')">Login</button>
+            <button type="button" onclick="setActionForm('register')">Register</button>
         </form>
     </div>
+
 <script>
-    function setActionForm(action){
-        let form = document.getElementById("auth-form")
-        if (action === 'login'){
-            form.action = "{{ url_for('login_page')}}";
-            form.method = 'post';
-            form.submit();
-        }else if (action === "register"){
-            form.action = {{ url_for ('register_page')}}
-            form.method = 'post';
-            form.submit();
+    function setActionForm(action) {
+        let form = document.getElementById("auth-form");
+
+        if (action === 'login') {
+            form.action = "{{ url_for('login_page') }}";
+        } else if (action === 'register') {
+            form.action = "{{ url_for('register_page') }}";
         }
+
+        form.submit();
     }
 </script>
-
 
 </body>
 </html>
